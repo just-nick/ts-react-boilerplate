@@ -1,0 +1,25 @@
+@keyframes loader-animation {
+    0% {
+        width: 5rem;
+    }
+    50% {
+        width: 2rem;
+    }
+    100% {
+        width: 5rem;
+    }
+}
+
+.loader-component {
+    span {
+        display: none;
+    }
+    &::before {
+        animation: loader-animation 1s infinite;
+        display: block;
+        background: hotpink;
+        content: '';
+        height: 1rem;
+        width: 5rem;
+    }
+}
